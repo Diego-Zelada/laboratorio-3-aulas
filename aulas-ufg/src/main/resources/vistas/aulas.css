@@ -1,0 +1,125 @@
+.root {
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+    -fx-accent: #254bab;
+    -fx-focus-color: #335ec4;
+    -fx-faint-focus-color: transparent;
+}
+
+.superficie, .panel-desplazable, .panel-desplazable > .viewport {
+    -fx-background-color: #eff3f9;
+}
+
+.login-marca, .barra {
+    -fx-background-color: #172744;
+}
+
+.login-panel, .tarjeta {
+    -fx-background-color: #ffffff;
+}
+
+.tarjeta {
+    -fx-background-radius: 12px;
+    -fx-border-color: #dbe3ef;
+    -fx-border-radius: 12px;
+}
+
+.marca {
+    -fx-text-fill: #d4e2ff;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.titulo-marca {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 39px;
+    -fx-font-weight: bold;
+}
+
+.texto-marca {
+    -fx-text-fill: #d7e2f3;
+    -fx-font-size: 14px;
+}
+
+.titulo {
+    -fx-text-fill: #172744;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.subtitulo {
+    -fx-text-fill: #4f5d74;
+}
+
+.etiqueta {
+    -fx-text-fill: #202f48;
+    -fx-font-weight: bold;
+}
+
+.text-field, .combo-box-base {
+    -fx-background-color: #f7f9fd;
+    -fx-background-radius: 7px;
+    -fx-border-color: #c9d4e6;
+    -fx-border-radius: 7px;
+    -fx-min-height: 38px;
+}
+
+.text-field {
+    -fx-padding: 7px 11px;
+    -fx-prompt-text-fill: #62728b;
+}
+
+.text-field:focused, .combo-box-base:focused {
+    -fx-border-color: #335ec4;
+}
+
+.button {
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 7px;
+    -fx-cursor: hand;
+}
+
+.button:focused {
+    -fx-border-color: #6e92ea;
+    -fx-border-radius: 7px;
+}
+
+.principal {
+    -fx-background-color: #254bab;
+    -fx-text-fill: #ffffff;
+}
+
+.principal:hover {
+    -fx-background-color: #1c3c92;
+}
+
+.secundario {
+    -fx-background-color: #e7edf9;
+    -fx-text-fill: #204185;
+}
+
+.secundario:hover {
+    -fx-background-color: #dbe5f9;
+}
+
+.salida {
+    -fx-background-color: #2b4167;
+    -fx-text-fill: #ffffff;
+}
+
+.salida:hover {
+    -fx-background-color: #395584;
+}
+
+.mensaje {
+    -fx-text-fill: #465674;
+}
+
+.mensaje.error {
+    -fx-text-fill: #a1202b;
+}
+
+.mensaje.exito {
+    -fx-text-fill: #146149;
+}
