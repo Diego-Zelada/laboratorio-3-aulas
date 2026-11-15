@@ -2,8 +2,13 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
@@ -17,16 +22,71 @@
             <Label text="AULAS UFG" styleClass="marca"/>
             <Region HBox.hgrow="ALWAYS"/>
             <Label fx:id="sesion" styleClass="texto-marca"/>
-            <Button text="Cerrar sesión" onAction="#cerrarSesion" styleClass="salida"/>
+            <Button fx:id="botonSalir" text="Cerrar sesión" onAction="#cerrarSesion" styleClass="salida"/>
         </HBox>
     </top>
     <center>
-        <VBox alignment="CENTER" spacing="12.0">
-            <padding><Insets top="30.0" right="30.0" bottom="30.0" left="30.0"/></padding>
-            <Label text="Administración de aulas" styleClass="titulo"/>
-            <Label text="Sesión iniciada. Esta vista sirve de base para el formulario de aulas."
-                   wrapText="true" styleClass="subtitulo"/>
-            <Label fx:id="mensaje" wrapText="true" styleClass="mensaje"/>
-        </VBox>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="panel-desplazable">
+            <content>
+                <VBox alignment="TOP_CENTER">
+                    <padding><Insets top="22.0" right="26.0" bottom="22.0" left="26.0"/></padding>
+                    <VBox maxWidth="758.0" spacing="12.0" styleClass="tarjeta">
+                        <padding><Insets top="19.0" right="24.0" bottom="14.0" left="24.0"/></padding>
+                        <VBox spacing="3.0">
+                            <Label text="Registrar aula" styleClass="titulo"/>
+                            <Label text="Completa los siete campos para guardar el aula."
+                                   wrapText="true" styleClass="subtitulo"/>
+                        </VBox>
+                        <GridPane fx:id="formulario" hgap="16.0" vgap="10.0">
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="50.0"/>
+                                <ColumnConstraints percentWidth="50.0"/>
+                            </columnConstraints>
+                            <VBox spacing="4.0">
+                                <Label text="Nombre del aula" styleClass="etiqueta"/>
+                                <TextField fx:id="nombre" accessibleText="Nombre del aula" promptText="Ej. B-204"/>
+                            </VBox>
+                            <VBox spacing="4.0" GridPane.columnIndex="1">
+                                <Label text="Edificio" styleClass="etiqueta"/>
+                                <TextField fx:id="edificio" accessibleText="Edificio" promptText="Ej. Edificio B"/>
+                            </VBox>
+                            <VBox spacing="4.0" GridPane.rowIndex="1">
+                                <Label text="Planta" styleClass="etiqueta"/>
+                                <ComboBox fx:id="planta" accessibleText="Planta" promptText="Selecciona una planta"
+                                          maxWidth="Infinity"/>
+                            </VBox>
+                            <VBox spacing="4.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <Label text="Capacidad" styleClass="etiqueta"/>
+                                <TextField fx:id="capacidad" accessibleText="Capacidad" promptText="Ej. 30"/>
+                            </VBox>
+                            <VBox spacing="4.0" GridPane.rowIndex="2">
+                                <Label text="Tipo de aula" styleClass="etiqueta"/>
+                                <ComboBox fx:id="tipoAula" accessibleText="Tipo de aula" promptText="Selecciona el tipo"
+                                          maxWidth="Infinity"/>
+                            </VBox>
+                            <VBox spacing="4.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <Label text="Estado" styleClass="etiqueta"/>
+                                <ComboBox fx:id="estado" accessibleText="Estado" promptText="Selecciona el estado"
+                                          maxWidth="Infinity"/>
+                            </VBox>
+                            <VBox spacing="4.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                <Label text="Responsable" styleClass="etiqueta"/>
+                                <TextField fx:id="responsable" accessibleText="Responsable"
+                                           promptText="Nombre de la persona a cargo"/>
+                            </VBox>
+                        </GridPane>
+                        <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                            <Button fx:id="botonRecargar" text="Recargar opciones" onAction="#cargarOpciones"
+                                    visible="false" managed="false" styleClass="secundario"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Button fx:id="botonLimpiar" text="Limpiar" onAction="#limpiar" styleClass="secundario"/>
+                            <Button fx:id="botonGuardar" text="Guardar" onAction="#guardar" disable="true"
+                                    styleClass="principal"/>
+                        </HBox>
+                        <Label fx:id="mensaje" wrapText="true" minHeight="26.0" styleClass="mensaje"/>
+                    </VBox>
+                </VBox>
+            </content>
+        </ScrollPane>
     </center>
 </BorderPane>
