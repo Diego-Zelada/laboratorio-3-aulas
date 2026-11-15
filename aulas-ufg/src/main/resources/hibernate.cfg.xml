@@ -7,5 +7,9 @@
         <property name="hibernate.connection.pool_size">4</property>
         <property name="hibernate.hbm2ddl.auto">validate</property>
         <mapping class="edu.ufg.aulas.entidades.Usuario"/>
+        <mapping class="edu.ufg.aulas.entidades.Aula"/>
+        <mapping class="edu.ufg.aulas.entidades.Planta"/>
+        <mapping class="edu.ufg.aulas.entidades.TipoAula"/>
+        <mapping class="edu.ufg.aulas.entidades.EstadoAula"/>
     </session-factory>
 </hibernate-configuration>
