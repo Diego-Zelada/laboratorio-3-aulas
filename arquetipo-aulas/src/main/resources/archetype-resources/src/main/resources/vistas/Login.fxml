@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="${package}.controladores.LoginController"
+            styleClass="superficie" stylesheets="@aulas.css">
+    <left>
+        <VBox alignment="CENTER_LEFT" prefWidth="318.0" spacing="16.0" styleClass="login-marca">
+            <padding><Insets top="46.0" right="36.0" bottom="46.0" left="36.0"/></padding>
+            <Label text="AULAS UFG" styleClass="marca"/>
+            <Label text="Registro de aulas" wrapText="true" styleClass="titulo-marca"/>
+            <Label text="Sistema de administración de espacios académicos."
+                   wrapText="true" styleClass="texto-marca"/>
+        </VBox>
+    </left>
+    <center>
+        <StackPane styleClass="login-panel">
+            <padding><Insets top="36.0" right="36.0" bottom="36.0" left="36.0"/></padding>
+            <VBox alignment="CENTER_LEFT" maxWidth="356.0" spacing="17.0">
+                <VBox spacing="5.0">
+                    <Label text="Iniciar sesión" styleClass="titulo"/>
+                    <Label text="Ingresa con tu cuenta del sistema."
+                           wrapText="true" styleClass="subtitulo"/>
+                </VBox>
+                <VBox spacing="6.0">
+                    <Label text="Correo" styleClass="etiqueta"/>
+                    <TextField fx:id="correo" accessibleText="Correo" promptText="correo@ejemplo.com" onAction="#ingresar"/>
+                </VBox>
+                <VBox spacing="6.0">
+                    <Label text="Clave" styleClass="etiqueta"/>
+                    <PasswordField fx:id="clave" accessibleText="Clave" promptText="Escribe tu clave" onAction="#ingresar"/>
+                </VBox>
+                <Button fx:id="botonIngresar" text="Ingresar" defaultButton="true"
+                        onAction="#ingresar" maxWidth="Infinity" styleClass="principal"/>
+                <Label fx:id="mensaje" wrapText="true" minHeight="42.0" styleClass="mensaje"/>
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>
