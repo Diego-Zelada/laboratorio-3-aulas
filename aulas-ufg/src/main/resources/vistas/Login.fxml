@@ -32,7 +32,7 @@
                 </VBox>
                 <VBox spacing="6.0">
                     <Label text="Correo" styleClass="etiqueta"/>
-                    <TextField fx:id="correo" accessibleText="Correo" promptText="correo@ejemplo.com" onAction="#ingresar"/>
+                    <TextField fx:id="correo" accessibleText="Correo" promptText="nombre@ejemplo.com" onAction="#ingresar"/>
                 </VBox>
                 <VBox spacing="6.0">
                     <Label text="Clave" styleClass="etiqueta"/>

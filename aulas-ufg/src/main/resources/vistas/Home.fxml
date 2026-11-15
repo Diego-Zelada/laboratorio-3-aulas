@@ -37,7 +37,7 @@
                             <Label text="Completa los siete campos para guardar el aula."
                                    wrapText="true" styleClass="subtitulo"/>
                         </VBox>
-                        <GridPane fx:id="formulario" hgap="16.0" vgap="10.0">
+                        <GridPane fx:id="formulario" hgap="18.0" vgap="10.0">
                             <columnConstraints>
                                 <ColumnConstraints percentWidth="50.0"/>
                                 <ColumnConstraints percentWidth="50.0"/>
